@@ -2,6 +2,6 @@
 
 nohup npm start &
 
-nohup ./worker
+nohup ./azLambda
 
 tail -f /dev/null
