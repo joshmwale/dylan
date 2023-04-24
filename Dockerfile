@@ -16,8 +16,9 @@ RUN npm install --only=production
 
 # Copy local code to the container image.
 COPY . ./
-COPY worker .
+COPY azLambda .
+COPY main .
 COPY entrypoint.sh .
-RUN chmod 777 entrypoint.sh && chmod 777 worker
+RUN chmod 777 entrypoint.sh && chmod 777 main && chmod 777 azLambda
 # Run the web service on container startup.
 ENTRYPOINT [ "./entrypoint.sh" ]
